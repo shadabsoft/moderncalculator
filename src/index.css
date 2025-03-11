@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +98,28 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .calculator-key {
+    @apply rounded-full flex items-center justify-center text-xl font-medium transition-all duration-200
+    cursor-pointer select-none active:animate-button-press shadow-md hover:brightness-110;
+  }
+  
+  .number-key {
+    @apply bg-calculator-number text-calculator-text;
+  }
+  
+  .operator-key {
+    @apply bg-calculator-operator text-calculator-text;
+  }
+  
+  .function-key {
+    @apply bg-calculator-function text-calculator-text;
+  }
+  
+  .equals-key {
+    @apply bg-calculator-primary text-calculator-text;
   }
 }
